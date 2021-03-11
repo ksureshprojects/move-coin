@@ -8,7 +8,7 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 from resources import app
-from util import test_api
+from util import test_api, last_1000_min
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
@@ -35,6 +35,11 @@ app.layout = html.Div(children=[
     html.Button(
         id='test-api',
         children='Test API'
+    ),
+
+    html.Button(
+        id='1000-min',
+        children='1000 min'
     ),
 
     html.Div(
